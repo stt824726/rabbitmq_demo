@@ -11,7 +11,13 @@ public class TopicReceiver {
     @RabbitHandler
     @RabbitListener(queues = "topic.messages")
     public void process(String message) {
-        System.out.println("Topic Receiver1  : " + message);
+        System.out.println("topic.messages Receiver1  : " + message);
+    }
+
+    @RabbitHandler
+    @RabbitListener(queues = "topic.message")
+    public void process2(String message) {
+        System.out.println("topic.message Receiver1  : " + message);
     }
 
 }

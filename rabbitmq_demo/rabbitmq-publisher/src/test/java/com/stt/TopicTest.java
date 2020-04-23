@@ -16,12 +16,15 @@ public class TopicTest {
 
 	@Test
 	public void topic() throws Exception {
-		sender.send();
+		for(int i = 0 ; i < 10000; i++){
+			sender.send();
+		}
 	}
 
 	@Test
 	public void topic1() throws Exception {
 		sender.send1();
+		Thread.sleep(3000000);
 	}
 
 	@Test
